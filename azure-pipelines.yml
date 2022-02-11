@@ -7,7 +7,7 @@
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'myfirstrg'
     location: 'West Europe'
-    templateLocation: 'URL of the file'
+    templateLocation: 'https://github.com/praveepulisettyaws/azurearm-vm/blob/main/internal-lb.bicep'
     csmFileLink: 'https://github.com/praveepulisettyaws/azurearm-vm/blob/main/internal-lb.bicep'
     deploymentMode: 'Incremental'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
