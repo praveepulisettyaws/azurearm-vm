@@ -1,0 +1,30 @@
+# Starter pipeline
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'Free Trial(cc9bf5b0-8f1f-45eb-9372-155c7f38025d)'
+    subscriptionId: 'cc9bf5b0-8f1f-45eb-9372-155c7f38025d'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'myfirstrg'
+    location: 'West Europe'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://github.com/praveepulisettyaws/azurearm-vm/blob/main/internal-lb.bicep'
+    deploymentMode: 'Incremental'
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
